@@ -1,0 +1,93 @@
+@prefix : <http://www.example.com/iot/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@base <http://www.example.com/iot/> .
+
+<http://www.example.com/iot/> rdf:type owl:Ontology ;
+                               owl:imports ssn: .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://webprotege.stanford.edu/RBccSBv9AnLZWugbhAaI6kh
+<http://webprotege.stanford.edu/RBccSBv9AnLZWugbhAaI6kh> rdf:type owl:Class ;
+                                                         rdfs:label "switch" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://webprotege.stanford.edu/R8f3KN5hVUgdDfvPeDr2kS1
+<http://webprotege.stanford.edu/R8f3KN5hVUgdDfvPeDr2kS1> rdf:type owl:NamedIndividual ,
+                                                                  sosa:Sensor ;
+                                                         sosa:observes <http://webprotege.stanford.edu/RBffmyropZAu0qlTRthkKmM> ;
+                                                         rdfs:comment "Vibration detect"^^xsd:string ;
+                                                         rdfs:label "lounge_vibration1"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/RBTOsM0fLe1h4CRz5geehm1
+<http://webprotege.stanford.edu/RBTOsM0fLe1h4CRz5geehm1> rdf:type owl:NamedIndividual ,
+                                                                  sosa:Sensor ;
+                                                         sosa:observes <http://webprotege.stanford.edu/RBpwWbbLlN0krVCBCNVgj4W> ;
+                                                         rdfs:comment "Light detect"^^xsd:string ;
+                                                         rdfs:label "lounge_light1" .
+
+
+###  http://webprotege.stanford.edu/RBaz88xTIQ7fDfrIchJfap2
+<http://webprotege.stanford.edu/RBaz88xTIQ7fDfrIchJfap2> rdf:type owl:NamedIndividual ,
+                                                                  sosa:Sensor ;
+                                                         sosa:observes <http://webprotege.stanford.edu/RwNQ4tkZyT1jMHe7gd7b5T> ;
+                                                         rdfs:comment "Motion detect"^^xsd:string ;
+                                                         rdfs:label "lounge_motion1" .
+
+
+###  http://webprotege.stanford.edu/RBffmyropZAu0qlTRthkKmM
+<http://webprotege.stanford.edu/RBffmyropZAu0qlTRthkKmM> rdf:type owl:NamedIndividual ,
+                                                                  sosa:ObservableProperty ;
+                                                         rdfs:label "vibration"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/RBpwWbbLlN0krVCBCNVgj4W
+<http://webprotege.stanford.edu/RBpwWbbLlN0krVCBCNVgj4W> rdf:type owl:NamedIndividual ,
+                                                                  sosa:ObservableProperty ;
+                                                         rdfs:label "light"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/RCt82FTXSCcmG5NlyWvsxCz
+<http://webprotege.stanford.edu/RCt82FTXSCcmG5NlyWvsxCz> rdf:type owl:NamedIndividual ,
+                                                                  sosa:Sensor ;
+                                                         sosa:observes <http://webprotege.stanford.edu/RcrCGmRQEHwjxJlsdDtFoR> ;
+                                                         rdfs:comment "Sound detect"^^xsd:string ;
+                                                         rdfs:label "lounge_sound1" .
+
+
+###  http://webprotege.stanford.edu/RcrCGmRQEHwjxJlsdDtFoR
+<http://webprotege.stanford.edu/RcrCGmRQEHwjxJlsdDtFoR> rdf:type owl:NamedIndividual ,
+                                                                 sosa:ObservableProperty ;
+                                                        rdfs:label "sound"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/RrWObci1n6hdRWymR1CMQL
+<https://Delusionsx1.github.io/bedroomNode1> rdf:type owl:NamedIndividual ,
+                                                                 sosa:Platform ;
+                                                        sosa:hosts <http://webprotege.stanford.edu/R8f3KN5hVUgdDfvPeDr2kS1> ,
+                                                                   <http://webprotege.stanford.edu/RBTOsM0fLe1h4CRz5geehm1> ,
+                                                                   <http://webprotege.stanford.edu/RBaz88xTIQ7fDfrIchJfap2> ,
+                                                                   <http://webprotege.stanford.edu/RCt82FTXSCcmG5NlyWvsxCz> ;
+                                                        rdfs:label "loungeNode" .
+
+
+###  http://webprotege.stanford.edu/RwNQ4tkZyT1jMHe7gd7b5T
+<http://webprotege.stanford.edu/RwNQ4tkZyT1jMHe7gd7b5T> rdf:type owl:NamedIndividual ,
+                                                                 sosa:ObservableProperty ;
+                                                        rdfs:label "motion"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi
