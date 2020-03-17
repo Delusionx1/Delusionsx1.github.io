@@ -75,7 +75,7 @@
 
 
 ###  http://webprotege.stanford.edu/RrWObci1n6hdRWymR1CMQL
-<https://Delusionsx1.github.io/bedroomNode1> rdf:type owl:NamedIndividual ,
+<https://Delusionx1.github.io/bedroomNode1> rdf:type owl:NamedIndividual ,
                                                                  sosa:Platform ;
                                                         sosa:hosts <http://webprotege.stanford.edu/R8f3KN5hVUgdDfvPeDr2kS1> ,
                                                                    <http://webprotege.stanford.edu/RBTOsM0fLe1h4CRz5geehm1> ,
